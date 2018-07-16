@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"> 
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> 
+	<link rel="stylesheet" type="text/css" href="css/clone2.css">
+	<title>Cloning project 2</title>
+</head>
+<body> 
+	<div class="row">
+		<div id="elements" class="col-md-2">
+			<h1>Elements</h1>
+			<ul>
+				<li id="t">titre</li>
+				<li id="p">paragraphe</li>
+				<li id="lo">liste ordonnée</li>
+				<li id="lu">liste non ordonnée</li>
+				<li id="img">image</li>
+				<li id="vid">video</li>
+				<li id="link">lien</li>
+				<li id="aud">audio</li> 
+			</ul>
+		</div>
+		<div id="code" class="col-md-5">
+			<h1>Code</h1>		
+<xmp id="titre">
+	<h1> titre </h1>
+</xmp>	
+<xmp id="paragraphe">
+	<p>Ceci est un paragraphe</p>
+</xmp>
+<xmp id="ol">
+  <ol>
+  	<li>item 1</li>
+  	<li>item 2</li>
+  	<li>item 3</li>
+  </ol>
+</xmp>
+<xmp id="ul">
+  <ul>
+  	<li>item 1</li>
+  	<li>item 2</li>
+  	<li>item 3</li>
+  </ul>
+</xmp>
+<xmp id="image">
+	<img src="res/image.png" >
+</xmp>
+<xmp id="video"> 
+	<video src="res/video.mp4" controls></video>
+</xmp>
+<xmp id="lien"> 
+	<a href="https://youtube.com"></a>
+</xmp>
+<xmp id="audio"> 
+	<audio src="res/audio.mp3"></audio>
+</xmp> 
+		</div>
+
+		<div id="preview" class="col-md-5">
+			<h1>Preview</h1>
+			<h1 id="dt"> titre </h1>
+			<p id="dp">Ceci est un paragraphe</p>
+			<ol id="dol">
+				<li>item 1</li>
+				<li>item 2</li>
+				<li>item 3</li>
+			</ol>
+			<ul id="dul">
+				<li>item 1</li>
+				<li>item 2</li>
+				<li>item 3</li>
+			</ul>
+			<img src="res/image.png" id="dimg" style="width: 400px; height: 300px;"><br>
+			<video src="res/video.mp4" controls id="dvid" style="width: 400px; height: 300px;"></video>
+			<a href="https://youtube.com" id="dlink" style="font-size: 18px;"> https://youtube.com</a>
+			<audio src="res/audio.mp3" id="daudio" controls></audio>
+		</div>
+	</div>
+</body>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script type="text/javascript">
+		$("#t").click(function(){
+			$("#titre").css("display","block")
+			$("#dt").css("display","block")
+		})
+		$("#p").click(function(){
+			$("#paragraphe").css("display","block")
+			$("#dp").css("display","block")
+		})
+		$("#lo").click(function(){
+			$("#ol").css("display","block")
+			$("#dol").css("display","block")
+		})
+		$("#lu").click(function(){
+			$("#ul").css("display","block")
+			$("#dul").css("display","block")
+		})
+		$("#img").click(function(){
+			$("#image").css("display","block")
+			$("#dimg").css("display","block")
+		})
+		$("#vid").click(function(){
+			$("#video").css("display","block")
+			$("#dvid").css("display","block")
+		})
+		$("#aud").click(function(){
+			$("#audio").css("display","block")
+			$("#daudio").css("display","block")
+		})
+		$("#link").click(function(){
+			$("#lien").css("display","block")
+			$("#dlink").css("display","block")
+		})
+	</script>
+
+	<script type="text/javascript">
+		$("#titre").click(function(){
+			var str=prompt("Type the title you want");
+			if (str==null)
+				return;
+			else{
+				$("#titre").html("<h1>"+str+"</h1>");
+				$("#dt").html(str);
+			}
+		})
+		$("#paragraphe").click(function(){
+			var str=prompt("Type the paragraph you want");
+			if (str==null)
+				return;
+			else{
+				$("#paragraphe").html("<p>"+str+"</p>");
+				$("#dp").html(str);
+			}
+		})
+	</script>
+</html>

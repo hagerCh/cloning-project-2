@@ -1,0 +1,48 @@
+h1{
+	text-align: center;
+	background-color: grey;
+	color: white;
+	margin:0;
+}
+
+#elements, #preview,#code{
+	border-left: solid 3px black;
+	height: 1500px;
+	padding: 0px;
+}
+
+#elements ul{
+	background-color: #C3C3C3;
+	padding: 20px;
+	height:1500px;
+}
+#elements li{ 
+	list-style-type: none;
+	text-align: left;
+	width: 100%;
+	padding: 10px;
+	font-size: 18px; 
+}
+
+#elements li:hover{
+	border: solid 0.5px black;
+	width: 100%; 
+	cursor: default;
+}
+
+xmp{
+	display: none;
+	text-align: left;
+}
+
+#dt{ 
+	background-color: transparent;
+	color: black; 
+	text-align: left; 
+	font-weight: bold;
+}
+
+#dp,#dt,#dol,#dul,#dimg,#dvid,#daudio,#dlink{
+	display: none;
+	margin-top: 30px; 
+}
